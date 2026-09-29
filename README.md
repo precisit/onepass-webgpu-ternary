@@ -10,6 +10,9 @@ version is a **1.59 MB** file (the dense int8 file is 7.8 MB) that plays at the 
 
 **Try it:** [the Size demo](https://precisit.github.io/onepass-web/demo/c4-size/) runs the models in your browser.
 
+**The story:** [A game-playing AI in 1.6 MB](https://precisit.com/en/blog/onepass-c4-size/)
+(also [in Swedish](https://precisit.com/blog/onepass-c4-size/)).
+
 ## Results
 
 Game scores: 200 games from the empty board, colours alternating, both sides playing a random move 5 % of the time,
