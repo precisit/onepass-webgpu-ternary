@@ -1,0 +1,31 @@
+{
+ "format": "t34",
+ "group": 128,
+ "parameters": {
+  "ternary": 7077888,
+  "int8": 262400,
+  "fp16": 42240
+ },
+ "bytes": {
+  "ternary_codes": 1105920,
+  "ternary_scales": 110592,
+  "int8": 262416,
+  "fp16": 84480
+ },
+ "tensor_bytes": 1563408,
+ "bits_per_weight": {
+  "ternary_codes": 1.25,
+  "ternary_codes_and_scales": 1.375,
+  "all_parameters": 1.6942
+ },
+ "relative_rms_error": {
+  "ternary": 0.5604243874549866,
+  "int8": 0.010192514397203922,
+  "fp16": 0.00021045304310973734
+ },
+ "source": {
+  "checkpoint": "model",
+  "state_signature": "f39b6103d46a197e5679537688c149d652a977b369888cdb56d94458486c3278"
+ },
+ "name": "v2-ternary-t34-qat"
+}

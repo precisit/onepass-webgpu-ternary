@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-t34-ptq",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 9.298324584960938e-06,
+ "file_bytes": 1593726,
+ "file_sha256": "a5555d334b0f4cde5c79bfa275ad5625dd960de0b8f028e15a4b6e9308a39ae9",
+ "onnxruntime": "1.30.0"
+}

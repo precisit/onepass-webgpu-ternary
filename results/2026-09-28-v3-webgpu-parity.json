@@ -1,0 +1,61 @@
+{
+ "what": "onepass-webgpu with the ternary plugins (kernels/ternary-formats.js) vs ONNX Runtime CPU running the file's FunctionProto reference decode, all 17 325 eval positions, batch 1 (the demo's path)",
+ "runtime": "onepass-webgpu 517cb46; Chrome headless, Apple M1 Max (metal-3)",
+ "date": "2026-09-28",
+ "cells": {
+  "v3-ternary-t34": {
+   "fromOnnx": false,
+   "precision": "f32",
+   "weights": "t34 + int8 (f32 for the rest)",
+   "gpu_weight_bytes": 1964032,
+   "batch": 1,
+   "positions": 17325,
+   "argmax_agree": 17325,
+   "flips": [],
+   "max_abs_diff": 2.7894973754882812e-05,
+   "mean_abs_diff": 9.833223209809432e-07,
+   "ms_total": 88648,
+   "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3"
+   },
+   "file_sha256": "01a2957da8bcb77c7d8cd098f52b9ed853f2d874852ae97747c8c937756e0723"
+  },
+  "v3-ternary-b243": {
+   "fromOnnx": false,
+   "precision": "f32",
+   "weights": "base243 + int8 (f32 for the rest)",
+   "gpu_weight_bytes": 2295808,
+   "batch": 1,
+   "positions": 17325,
+   "argmax_agree": 17325,
+   "flips": [],
+   "max_abs_diff": 3.123283386230469e-05,
+   "mean_abs_diff": 1.0030612550225755e-06,
+   "ms_total": 101715,
+   "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3"
+   },
+   "file_sha256": "656bffc5a0e61b6d6d378a35e3976768987b2b9350adaec1266a5b99760fc5ee"
+  },
+  "v3-ternary-t34-long": {
+   "fromOnnx": false,
+   "precision": "f32",
+   "weights": "t34 + int8 (f32 for the rest)",
+   "gpu_weight_bytes": 1964032,
+   "batch": 1,
+   "positions": 17325,
+   "argmax_agree": 17325,
+   "flips": [],
+   "max_abs_diff": 3.2901763916015625e-05,
+   "mean_abs_diff": 1.012187727856441e-06,
+   "ms_total": 77754,
+   "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3"
+   },
+   "file_sha256": "6ba65b964ad35a7029535461280b3726c332634b28ae16712d660e2dd56b3627"
+  }
+ }
+}

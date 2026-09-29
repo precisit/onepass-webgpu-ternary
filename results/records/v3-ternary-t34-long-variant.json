@@ -1,0 +1,1 @@
+{"name": "v3-ternary-t34-long", "tensor_bytes": 1563408, "bits_per_weight": {"ternary_codes": 1.25, "ternary_codes_and_scales": 1.375, "all_parameters": 1.6942}, "relative_rms_error": {"ternary": 0.545059859752655, "int8": 0.0101831816136837, "fp16": 0.0002099930716212839}}

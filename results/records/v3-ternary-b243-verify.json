@@ -1,0 +1,10 @@
+{
+ "variant": "v3-ternary-b243",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 2.2411346435546875e-05,
+ "file_bytes": 1925932,
+ "file_sha256": "656bffc5a0e61b6d6d378a35e3976768987b2b9350adaec1266a5b99760fc5ee",
+ "onnxruntime": "1.30.0"
+}

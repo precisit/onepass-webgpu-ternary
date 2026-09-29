@@ -1,0 +1,10 @@
+{
+ "variant": "v3-ternary-t34-seed8",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 3.24249267578125e-05,
+ "file_bytes": 1593728,
+ "file_sha256": "902d6a45f01fc9b5cdef00c954e08eb6d6ffaf34395a5fb8d973fe90cb265142",
+ "onnxruntime": "1.30.0"
+}

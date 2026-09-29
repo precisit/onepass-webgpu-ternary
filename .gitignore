@@ -1,0 +1,10 @@
+work/
+__pycache__/
+*.onnx
+*.npz
+*.safetensors
+.DS_Store
+node_modules/
+
+# the exported and verified models (small; everything else stays out)
+!results/models/*/model.onnx

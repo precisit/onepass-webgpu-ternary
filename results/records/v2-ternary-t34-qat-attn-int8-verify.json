@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-t34-qat-attn-int8",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 1.9550323486328125e-05,
+ "file_bytes": 3547785,
+ "file_sha256": "0a1ee041f2fd0c1eeffb1f2decb827844c3575667034c0a7b2199a37d80d486d",
+ "onnxruntime": "1.30.0"
+}

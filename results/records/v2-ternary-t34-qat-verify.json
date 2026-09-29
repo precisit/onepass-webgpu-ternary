@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-t34-qat",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 2.574920654296875e-05,
+ "file_bytes": 1593726,
+ "file_sha256": "19f056e17d0c32274b505a10c183e27ecda781541f691ecd5d86e7f702090023",
+ "onnxruntime": "1.30.0"
+}

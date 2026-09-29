@@ -1,0 +1,10 @@
+{
+ "variant": "v3-ternary-t34",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 2.1696090698242188e-05,
+ "file_bytes": 1593722,
+ "file_sha256": "01a2957da8bcb77c7d8cd098f52b9ed853f2d874852ae97747c8c937756e0723",
+ "onnxruntime": "1.30.0"
+}

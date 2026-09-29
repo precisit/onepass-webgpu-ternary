@@ -1,0 +1,1 @@
+{"name": "v2-ternary-b243-qat-attn-int8", "tensor_bytes": 3738456, "bits_per_weight": {"ternary_codes": 1.625, "ternary_codes_and_scales": 1.75, "all_parameters": 4.0511}, "relative_rms_error": {"ternary": 0.46075159311294556, "int8": 0.01018492691218853, "fp16": 0.0002082596329273656}}

@@ -1,0 +1,1 @@
+{"a": "onnx-v1:models/onepass-c4-8x24.onnx", "a_score": 0.03, "a_score_ci": [0.0138, 0.0639], "a_win_rate": 0.03, "a_win_rate_ci": [0.0138, 0.0639], "a_wins": 6, "b": "bot:4", "b_wins": 194, "distinct_games": 65, "draws": 0, "first_player_win_rate": 0.53, "games": 200, "noise": 0.05, "opening": 0, "seed": 2026, "wall_s": 3.7}

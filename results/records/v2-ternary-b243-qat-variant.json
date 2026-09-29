@@ -1,0 +1,31 @@
+{
+ "format": "b243",
+ "group": 128,
+ "parameters": {
+  "ternary": 7077888,
+  "int8": 262400,
+  "fp16": 42240
+ },
+ "bytes": {
+  "ternary_codes": 1437696,
+  "ternary_scales": 110592,
+  "int8": 262416,
+  "fp16": 84480
+ },
+ "tensor_bytes": 1895184,
+ "bits_per_weight": {
+  "ternary_codes": 1.625,
+  "ternary_codes_and_scales": 1.75,
+  "all_parameters": 2.0537
+ },
+ "relative_rms_error": {
+  "ternary": 0.45703038573265076,
+  "int8": 0.01018907967954874,
+  "fp16": 0.0002108942426275462
+ },
+ "source": {
+  "checkpoint": "model",
+  "state_signature": "f2cc19544cc988eb5fc02e9e370cf08053f605fecb182c78b1dbc3e1d5f7e090"
+ },
+ "name": "v2-ternary-b243-qat"
+}

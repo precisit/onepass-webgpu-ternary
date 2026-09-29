@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-b243-qat-attn-int8",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 2.0503997802734375e-05,
+ "file_bytes": 3769331,
+ "file_sha256": "88f656a4b4574a9d036c618f5ecd99f0917358dba4923f9e022c5f4cd2284243",
+ "onnxruntime": "1.30.0"
+}

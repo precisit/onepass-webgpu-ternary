@@ -1,0 +1,1116 @@
+{
+ "format": "onepass-plan/1",
+ "architecture": "onepass-scorer",
+ "config": {
+  "vocab": 257,
+  "width": 256,
+  "heads": 8,
+  "layers": 8,
+  "ff": 1024,
+  "rank": 256,
+  "context_len": 44,
+  "option_slots": 7,
+  "option_len": 8,
+  "eps": 1e-05,
+  "activation": "relu",
+  "norm_first": true
+ },
+ "model": {
+  "file": "model.onnx",
+  "bytes": 1925936,
+  "sha256": "2a2d83fc7441288edb2a6bd7ffb701ead0e01f3f8ef751866f94585b9a897b9d"
+ },
+ "inputs": {
+  "context_ids": [
+   44
+  ],
+  "option_ids": [
+   7,
+   8
+  ],
+  "option_mask": [
+   7
+  ]
+ },
+ "tensors": {
+  "embedding": {
+   "initializer": "embedding.weight",
+   "transpose": false,
+   "shape": [
+    257,
+    256
+   ],
+   "quant": {
+    "dtype": "int8",
+    "scale": 0.03532586246728897,
+    "zero_point": 0
+   }
+  },
+  "pos_context": {
+   "initializer": "position.weight",
+   "transpose": false,
+   "shape": [
+    44,
+    256
+   ],
+   "rows": [
+    0,
+    44
+   ]
+  },
+  "pos_option": {
+   "initializer": "position.weight",
+   "transpose": false,
+   "shape": [
+    8,
+    256
+   ],
+   "rows": [
+    0,
+    8
+   ]
+  },
+  "layer0.qkv.w": {
+   "initializer": "encoder.layers.0.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.0.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer0.qkv.b": {
+   "initializer": "encoder.layers.0.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer0.out.w": {
+   "initializer": "encoder.layers.0.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.0.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer0.out.b": {
+   "initializer": "encoder.layers.0.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer0.ff1.w": {
+   "initializer": "encoder.layers.0.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.0.linear1.weight.s"
+   }
+  },
+  "layer0.ff1.b": {
+   "initializer": "encoder.layers.0.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer0.ff2.w": {
+   "initializer": "encoder.layers.0.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.0.linear2.weight.s"
+   }
+  },
+  "layer0.ff2.b": {
+   "initializer": "encoder.layers.0.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer0.norm1.w": {
+   "initializer": "encoder.layers.0.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer0.norm1.b": {
+   "initializer": "encoder.layers.0.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer0.norm2.w": {
+   "initializer": "encoder.layers.0.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer0.norm2.b": {
+   "initializer": "encoder.layers.0.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.qkv.w": {
+   "initializer": "encoder.layers.1.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.1.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer1.qkv.b": {
+   "initializer": "encoder.layers.1.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer1.out.w": {
+   "initializer": "encoder.layers.1.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.1.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer1.out.b": {
+   "initializer": "encoder.layers.1.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.ff1.w": {
+   "initializer": "encoder.layers.1.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.1.linear1.weight.s"
+   }
+  },
+  "layer1.ff1.b": {
+   "initializer": "encoder.layers.1.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer1.ff2.w": {
+   "initializer": "encoder.layers.1.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.1.linear2.weight.s"
+   }
+  },
+  "layer1.ff2.b": {
+   "initializer": "encoder.layers.1.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.norm1.w": {
+   "initializer": "encoder.layers.1.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.norm1.b": {
+   "initializer": "encoder.layers.1.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.norm2.w": {
+   "initializer": "encoder.layers.1.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer1.norm2.b": {
+   "initializer": "encoder.layers.1.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.qkv.w": {
+   "initializer": "encoder.layers.2.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.2.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer2.qkv.b": {
+   "initializer": "encoder.layers.2.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer2.out.w": {
+   "initializer": "encoder.layers.2.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.2.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer2.out.b": {
+   "initializer": "encoder.layers.2.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.ff1.w": {
+   "initializer": "encoder.layers.2.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.2.linear1.weight.s"
+   }
+  },
+  "layer2.ff1.b": {
+   "initializer": "encoder.layers.2.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer2.ff2.w": {
+   "initializer": "encoder.layers.2.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.2.linear2.weight.s"
+   }
+  },
+  "layer2.ff2.b": {
+   "initializer": "encoder.layers.2.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.norm1.w": {
+   "initializer": "encoder.layers.2.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.norm1.b": {
+   "initializer": "encoder.layers.2.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.norm2.w": {
+   "initializer": "encoder.layers.2.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer2.norm2.b": {
+   "initializer": "encoder.layers.2.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.qkv.w": {
+   "initializer": "encoder.layers.3.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.3.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer3.qkv.b": {
+   "initializer": "encoder.layers.3.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer3.out.w": {
+   "initializer": "encoder.layers.3.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.3.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer3.out.b": {
+   "initializer": "encoder.layers.3.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.ff1.w": {
+   "initializer": "encoder.layers.3.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.3.linear1.weight.s"
+   }
+  },
+  "layer3.ff1.b": {
+   "initializer": "encoder.layers.3.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer3.ff2.w": {
+   "initializer": "encoder.layers.3.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.3.linear2.weight.s"
+   }
+  },
+  "layer3.ff2.b": {
+   "initializer": "encoder.layers.3.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.norm1.w": {
+   "initializer": "encoder.layers.3.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.norm1.b": {
+   "initializer": "encoder.layers.3.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.norm2.w": {
+   "initializer": "encoder.layers.3.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer3.norm2.b": {
+   "initializer": "encoder.layers.3.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.qkv.w": {
+   "initializer": "encoder.layers.4.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.4.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer4.qkv.b": {
+   "initializer": "encoder.layers.4.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer4.out.w": {
+   "initializer": "encoder.layers.4.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.4.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer4.out.b": {
+   "initializer": "encoder.layers.4.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.ff1.w": {
+   "initializer": "encoder.layers.4.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.4.linear1.weight.s"
+   }
+  },
+  "layer4.ff1.b": {
+   "initializer": "encoder.layers.4.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer4.ff2.w": {
+   "initializer": "encoder.layers.4.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.4.linear2.weight.s"
+   }
+  },
+  "layer4.ff2.b": {
+   "initializer": "encoder.layers.4.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.norm1.w": {
+   "initializer": "encoder.layers.4.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.norm1.b": {
+   "initializer": "encoder.layers.4.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.norm2.w": {
+   "initializer": "encoder.layers.4.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer4.norm2.b": {
+   "initializer": "encoder.layers.4.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.qkv.w": {
+   "initializer": "encoder.layers.5.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.5.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer5.qkv.b": {
+   "initializer": "encoder.layers.5.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer5.out.w": {
+   "initializer": "encoder.layers.5.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.5.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer5.out.b": {
+   "initializer": "encoder.layers.5.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.ff1.w": {
+   "initializer": "encoder.layers.5.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.5.linear1.weight.s"
+   }
+  },
+  "layer5.ff1.b": {
+   "initializer": "encoder.layers.5.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer5.ff2.w": {
+   "initializer": "encoder.layers.5.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.5.linear2.weight.s"
+   }
+  },
+  "layer5.ff2.b": {
+   "initializer": "encoder.layers.5.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.norm1.w": {
+   "initializer": "encoder.layers.5.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.norm1.b": {
+   "initializer": "encoder.layers.5.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.norm2.w": {
+   "initializer": "encoder.layers.5.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer5.norm2.b": {
+   "initializer": "encoder.layers.5.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.qkv.w": {
+   "initializer": "encoder.layers.6.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.6.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer6.qkv.b": {
+   "initializer": "encoder.layers.6.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer6.out.w": {
+   "initializer": "encoder.layers.6.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.6.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer6.out.b": {
+   "initializer": "encoder.layers.6.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.ff1.w": {
+   "initializer": "encoder.layers.6.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.6.linear1.weight.s"
+   }
+  },
+  "layer6.ff1.b": {
+   "initializer": "encoder.layers.6.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer6.ff2.w": {
+   "initializer": "encoder.layers.6.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.6.linear2.weight.s"
+   }
+  },
+  "layer6.ff2.b": {
+   "initializer": "encoder.layers.6.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.norm1.w": {
+   "initializer": "encoder.layers.6.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.norm1.b": {
+   "initializer": "encoder.layers.6.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.norm2.w": {
+   "initializer": "encoder.layers.6.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer6.norm2.b": {
+   "initializer": "encoder.layers.6.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.qkv.w": {
+   "initializer": "encoder.layers.7.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.7.self_attn.in_proj_weight.s"
+   }
+  },
+  "layer7.qkv.b": {
+   "initializer": "encoder.layers.7.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "layer7.out.w": {
+   "initializer": "encoder.layers.7.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.7.self_attn.out_proj.weight.s"
+   }
+  },
+  "layer7.out.b": {
+   "initializer": "encoder.layers.7.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.ff1.w": {
+   "initializer": "encoder.layers.7.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.7.linear1.weight.s"
+   }
+  },
+  "layer7.ff1.b": {
+   "initializer": "encoder.layers.7.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "layer7.ff2.w": {
+   "initializer": "encoder.layers.7.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "encoder.layers.7.linear2.weight.s"
+   }
+  },
+  "layer7.ff2.b": {
+   "initializer": "encoder.layers.7.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.norm1.w": {
+   "initializer": "encoder.layers.7.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.norm1.b": {
+   "initializer": "encoder.layers.7.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.norm2.w": {
+   "initializer": "encoder.layers.7.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "layer7.norm2.b": {
+   "initializer": "encoder.layers.7.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.qkv.w": {
+   "initializer": "option_encoder.layers.0.self_attn.in_proj_weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    768
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "option_encoder.layers.0.self_attn.in_proj_weight.s"
+   }
+  },
+  "option_layer.qkv.b": {
+   "initializer": "option_encoder.layers.0.self_attn.in_proj_bias",
+   "transpose": false,
+   "shape": [
+    768
+   ]
+  },
+  "option_layer.out.w": {
+   "initializer": "option_encoder.layers.0.self_attn.out_proj.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "option_encoder.layers.0.self_attn.out_proj.weight.s"
+   }
+  },
+  "option_layer.out.b": {
+   "initializer": "option_encoder.layers.0.self_attn.out_proj.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.ff1.w": {
+   "initializer": "option_encoder.layers.0.linear1.weight.c",
+   "transpose": false,
+   "shape": [
+    256,
+    1024
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "option_encoder.layers.0.linear1.weight.s"
+   }
+  },
+  "option_layer.ff1.b": {
+   "initializer": "option_encoder.layers.0.linear1.bias",
+   "transpose": false,
+   "shape": [
+    1024
+   ]
+  },
+  "option_layer.ff2.w": {
+   "initializer": "option_encoder.layers.0.linear2.weight.c",
+   "transpose": false,
+   "shape": [
+    1024,
+    256
+   ],
+   "format": {
+    "kind": "base243",
+    "group": 128,
+    "scales": "option_encoder.layers.0.linear2.weight.s"
+   }
+  },
+  "option_layer.ff2.b": {
+   "initializer": "option_encoder.layers.0.linear2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.norm1.w": {
+   "initializer": "option_encoder.layers.0.norm1.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.norm1.b": {
+   "initializer": "option_encoder.layers.0.norm1.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.norm2.w": {
+   "initializer": "option_encoder.layers.0.norm2.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "option_layer.norm2.b": {
+   "initializer": "option_encoder.layers.0.norm2.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "head.q.w": {
+   "initializer": "head.query.weight",
+   "transpose": true,
+   "shape": [
+    256,
+    256
+   ],
+   "quant": {
+    "dtype": "int8",
+    "scale": 0.0014188626082614064,
+    "zero_point": 0
+   }
+  },
+  "head.k.w": {
+   "initializer": "head.key.weight",
+   "transpose": true,
+   "shape": [
+    256,
+    256
+   ],
+   "quant": {
+    "dtype": "int8",
+    "scale": 0.002046409761533141,
+    "zero_point": 0
+   }
+  },
+  "head.v.w": {
+   "initializer": "head.value.weight",
+   "transpose": true,
+   "shape": [
+    256,
+    256
+   ],
+   "quant": {
+    "dtype": "int8",
+    "scale": 0.0010023514041677117,
+    "zero_point": 0
+   }
+  },
+  "head.context_norm.w": {
+   "initializer": "head.context_norm.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "head.context_norm.b": {
+   "initializer": "head.context_norm.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "head.option_norm.w": {
+   "initializer": "head.option_norm.weight",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  },
+  "head.option_norm.b": {
+   "initializer": "head.option_norm.bias",
+   "transpose": false,
+   "shape": [
+    256
+   ]
+  }
+ },
+ "plugins": [
+  "ternary-formats.js"
+ ]
+}

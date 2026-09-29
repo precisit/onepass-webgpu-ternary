@@ -1,0 +1,34 @@
+{
+ "format": "b243",
+ "group": 128,
+ "fit": "ls",
+ "select": "only:up",
+ "protect": "fp16",
+ "parameters": {
+  "ternary": 2359296,
+  "int8": 262400,
+  "fp16": 4760832
+ },
+ "bytes": {
+  "ternary_codes": 479232,
+  "ternary_scales": 36864,
+  "int8": 262416,
+  "fp16": 9521664
+ },
+ "tensor_bytes": 10300176,
+ "bits_per_weight": {
+  "ternary_codes": 1.625,
+  "ternary_codes_and_scales": 1.75,
+  "all_parameters": 11.1617
+ },
+ "relative_rms_error": {
+  "ternary": 0.4171260893344879,
+  "int8": 0.010171097703278065,
+  "fp16": 0.00020806615066248924
+ },
+ "source": {
+  "checkpoint": "model",
+  "state_signature": "d52cb7b750133d215d66549badfdfcc2192233a69d55e3eb89430fecfa09a45e"
+ },
+ "name": "sweep-b243-only-up"
+}

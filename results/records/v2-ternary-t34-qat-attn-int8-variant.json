@@ -1,0 +1,1 @@
+{"name": "v2-ternary-t34-qat-attn-int8", "tensor_bytes": 3517272, "bits_per_weight": {"ternary_codes": 1.25, "ternary_codes_and_scales": 1.375, "all_parameters": 3.8115}, "relative_rms_error": {"ternary": 0.5659038424491882, "int8": 0.010177267715334892, "fp16": 0.00021026642934884876}}

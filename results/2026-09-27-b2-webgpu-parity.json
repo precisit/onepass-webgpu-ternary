@@ -1,0 +1,22 @@
+{
+ "what": "B2 gate: onepass-webgpu with the ternary plugins (kernels/ternary-formats.js) vs ONNX Runtime CPU running the file's FunctionProto reference decode, all 17 325 eval positions",
+ "runtime": "onepass-webgpu (inner-loop plugin contract), kernels/ternary-formats.js with inner loops; Chrome 153 headless, Apple M1 Max (metal-3)",
+ "cells": {
+  "v2-ternary-b243-ptq": {
+   "file_sha256": "8dfa36e7c671e995b2ac5441f14bac8cd74135ba0c8e12d870fa0b8e74c49eff",
+   "positions": 17325,
+   "same_choice": 17325,
+   "max_abs_logit_diff": 3.5762786865234375e-05,
+   "gpu_weight_bytes": 2295808,
+   "ms_per_position_incl_test_loop": 6.51
+  },
+  "v2-ternary-t34-ptq": {
+   "file_sha256": "a5555d334b0f4cde5c79bfa275ad5625dd960de0b8f028e15a4b6e9308a39ae9",
+   "positions": 17325,
+   "same_choice": 17325,
+   "max_abs_logit_diff": 1.049041748046875e-05,
+   "gpu_weight_bytes": 1964032,
+   "ms_per_position_incl_test_loop": 4.85
+  }
+ }
+}

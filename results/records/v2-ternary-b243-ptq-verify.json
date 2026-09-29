@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-b243-ptq",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 3.719329833984375e-05,
+ "file_bytes": 1925936,
+ "file_sha256": "8dfa36e7c671e995b2ac5441f14bac8cd74135ba0c8e12d870fa0b8e74c49eff",
+ "onnxruntime": "1.30.0"
+}

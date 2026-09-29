@@ -1,0 +1,34 @@
+{
+ "format": "t34",
+ "group": 128,
+ "fit": "ls*1.2",
+ "select": "all",
+ "protect": "fp16",
+ "parameters": {
+  "ternary": 7077888,
+  "int8": 262400,
+  "fp16": 42240
+ },
+ "bytes": {
+  "ternary_codes": 1105920,
+  "ternary_scales": 110592,
+  "int8": 262416,
+  "fp16": 84480
+ },
+ "tensor_bytes": 1563408,
+ "bits_per_weight": {
+  "ternary_codes": 1.25,
+  "ternary_codes_and_scales": 1.375,
+  "all_parameters": 1.6942
+ },
+ "relative_rms_error": {
+  "ternary": 0.5411890149116516,
+  "int8": 0.010171097703278065,
+  "fp16": 0.00020889451843686402
+ },
+ "source": {
+  "checkpoint": "model",
+  "state_signature": "d52cb7b750133d215d66549badfdfcc2192233a69d55e3eb89430fecfa09a45e"
+ },
+ "name": "sweep-t34-ls-x1.2"
+}

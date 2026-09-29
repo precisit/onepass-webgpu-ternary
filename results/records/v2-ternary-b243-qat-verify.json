@@ -1,0 +1,10 @@
+{
+ "variant": "v2-ternary-b243-qat",
+ "positions": 17325,
+ "same_choice": 17325,
+ "all_same": true,
+ "max_abs_logit_diff": 2.002716064453125e-05,
+ "file_bytes": 1925936,
+ "file_sha256": "2a2d83fc7441288edb2a6bd7ffb701ead0e01f3f8ef751866f94585b9a897b9d",
+ "onnxruntime": "1.30.0"
+}
